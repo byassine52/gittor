@@ -66,7 +66,7 @@ class GitHubStore: ObservableObject {
 				}
 			}, receiveValue: { value in
 				print(value)
-				completion(value)
+				completion(value.filter { !$0.fork } )
 			})
 			.store(in: &subscriptions)
 	}
