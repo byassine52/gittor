@@ -1,0 +1,70 @@
+input_dir: Toranoko
+output_dir: Toranoko/Common/Helpers/SwiftGen
+
+# colors:
+#   inputs:
+#     - Common/Helpers/Colors.txt
+#   outputs:
+#     - templateName: literals-swift5
+#       output: Colors.swift
+
+fonts:
+  inputs:
+    - Resources/Fonts
+  outputs:
+    - templateName: swift5
+      output: Fonts.swift
+
+ib:
+  inputs:
+    - Controllers
+    - Scenes
+  outputs:
+    - templateName: scenes-swift5
+      output: Storyboards Scenes.swift
+      params:
+        ignoreTargetModule: true
+    - templateName: segues-swift5
+      output: Storyboards Segues.swift
+
+strings:
+  inputs:
+    - Common/Localizations/Base.lproj
+  outputs:
+    - templateName: structured-swift5
+      output: Strings.swift
+      params:
+        publicAccess: true
+
+xcassets:
+  inputs:
+    - Resources/Assets.xcassets
+  outputs:
+    - templateName: swift5
+      output: Assets.swift
+      params:
+        publicAccess: true
+
+# Static Data assets
+
+json:
+  inputs:
+    - Preview Content/Data
+  outputs:
+    - templateName: runtime-swift5
+      output: JSONFiles.swift
+
+yaml:
+  inputs:
+    - Preview Content/Data
+  outputs:
+    - templateName: inline-swift5
+      output: YAMLFiles.swift
+
+plist:
+  inputs:
+     - Info.plist
+     - Preview Content/Data
+  outputs:
+    - templateName: runtime-swift5
+      output: PlistFiles.swift

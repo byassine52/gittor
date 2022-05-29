@@ -1,0 +1,2 @@
+*.pbxproj merge=mergepbx
+*.otf filter=lfs diff=lfs merge=lfs -text
